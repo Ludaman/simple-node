@@ -19,5 +19,7 @@ script:
   - docker tag simple_node ludaman64/simple_node:latest
 
 after_success:
+  - echo "$DOCKER_USERNAME"
+  - echo "$DOCKER_PASSWORD"
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker push ludaman64/simple_node
