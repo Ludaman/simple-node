@@ -15,7 +15,7 @@ before_script:
 
 script:
   - docker --version # print the version for logging
-  - docker build -t simple-node .
+  - docker build -t simple_node .
   - docker tag simple_node push ludaman64/simple_node:latest
 
 after_success:
